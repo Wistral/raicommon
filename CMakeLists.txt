@@ -58,6 +58,7 @@ add_compile_options("-pthread")
 add_compile_options("-Wl,--no-as-needed")
 add_compile_options("-mtune=native")
 add_compile_options("-Wall" "-Wextra")
+add_compile_options("-Wall" "-Wextra" "-U__STRICT_ANSI__" "-D_POSIX_THREAD_SAFE_FUNCTIONS" "-Dreadlink(x,y,z)=0")
 
 # Set a default build if no build type is set
 if(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
